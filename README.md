@@ -1,42 +1,65 @@
-# My Demo Project
+# Outline VPN Management Panel
 
-This is a demo project repository that showcases a basic project structure and best practices.
+A comprehensive management panel for Outline VPN servers with user management, server management, and monitoring capabilities.
 
 ## Features
 
-- Clean project structure
-- Documentation
-- Basic setup instructions
+- User Management
+  - Create/Edit/Delete users
+  - Set bandwidth quotas
+  - Set expiry dates
+  - Generate subscription and SS links
+  - Monitor usage
 
-## Getting Started
+- Server Management
+  - Add/Edit/Remove servers
+  - Support for domain/IP configuration
+  - Server status monitoring
+  - Location management
+  - Auto-installation script
+
+- Dashboard
+  - Real-time statistics
+  - User activity monitoring
+  - Server health metrics
+  - Bandwidth usage graphs
+
+- Security
+  - JWT authentication
+  - Role-based access control
+  - Secure API communication
+
+## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Clash-zone/my-demo-project.git
+   git clone https://github.com/your-username/outline-vpn-manager.git
    ```
 
-2. Navigate to the project directory:
+2. Install dependencies:
    ```bash
-   cd my-demo-project
+   npm install
+   cd frontend && npm install
    ```
 
-## Project Structure
+3. Copy .env.example to .env and configure your environment variables:
+   ```bash
+   cp .env.example .env
+   ```
 
+4. Start the development server:
+   ```bash
+   npm run dev:full
+   ```
+
+## Server Installation
+
+To install Outline VPN on a new server:
+
+```bash
+./scripts/install_outline.sh -k YOUR_API_KEY [-d YOUR_DOMAIN]
 ```
-├── src/           # Source code files
-├── docs/          # Documentation
-├── tests/         # Test files
-└── README.md      # Project documentation
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
-This project is open source and available under the MIT License.
+MIT License
